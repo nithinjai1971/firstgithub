@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Creating a Message box
+        </title>
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+        <style>
+            .classcss{
+                border:3px solid;
+                border-color: blueviolet;
+                padding:15px;
+            }
+
+
+        </style>
+        </head>
+        <body>
+            <div id="firstdiv" class="classcss">
+                <h2> Click the below button to get the message box</h2>
+                <button id="button1">Transform</button>
+
+
+
+
+
+
+
+            </div>
+
+            <div id="seconddiv" class="classcss">
+                <h3> This is the animated message box</h3>
+                <br>
+                <p>We can use this while we want to create a tab for accepting our cookies and privacy settings</p>
+                <button id="button2">Click here</button>
+
+
+
+
+            </div>
+        </body>
+        <script src="importedcode.js"></script>
+        <script src="jqueryUI/jquery-ui.js"></script>
+        <script>
+            $("#button1").click(function(){
+                $("#seconddiv").dialog({
+                    title:"Privacy Settings",
+                    draggable:true,
+                    resizable:true,
+                    modal:true,
+
+                    buttons:[
+                        {
+                            text:"Ok",
+                            icon:"ui-icon-heart",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+
+                            
+                        },
+                        {
+                            text:"Close",
+                            icon:"ui-icon-heart",
+                            click:function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    ]
+
+                });
+
+            }
+            )
+
+
+            
+
+
+
+
+        </script>
+    
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Creating a tool tip tool</title>
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <style>
+            #firstdiv{
+                border:3px solid;
+                color: black;
+                padding:15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="firstdiv">
+            <h2>Bring the mouse to the image to see the Animations</h2>
+            <img src="nyc1.jpeg" width="300px" title="" id="image1">
+        </div>
+    </body>
+    <script src="importedcode.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+        $("#image1").tooltip({
+            content:"New York City",
+            show:{effect:"bounce",duration:4000},
+            hide:{effect:"explode",duration:2000}
+
+        });
+
+
+
+    </script>
+</html>

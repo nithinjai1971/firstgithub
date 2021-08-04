@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>The Auto complete Option program</title>
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+        <style>
+            #firstdiv{
+                border:3px solid;
+                border-top-color: brown;
+                border-right-color: chartreuse;
+                border-left-color: black;
+                border-bottom-color: blue;
+                padding:20px;
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <h2> Search in the below input bar to get various autocomplete options for the data you type in</h2>
+        <div id="firstdiv">
+            <label>Enter your Favorite City</label>
+            <input type="text" name="" id="firstinput">
+            
+
+
+
+
+        </div>
+    </body>
+    <script src="importedcode.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        var cities = ["Chennai", "Bangalore", "Delhi", "Mumbai", "New york", "New Jersey", "Chicago", "Long beach", "Dallas","Texas",
+             "Chengalpattu", "Bahrain", "Melbourne", "Manchester", "London", "Rome", "Russia"];
+
+
+
+        $("#firstinput").autocomplete(
+            {
+
+            source:cities        
+        },
+            
+            
+            {
+                autofocus:true,
+                minLength:2,
+                
+
+
+            });
+
+
+
+    </script>
+</html>
