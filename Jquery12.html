@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            Create an Accordion Animation
+        </title>
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+        <style>
+            #firstdiv{
+                border:3px solid;
+                border-color:black;
+                padding:15px;
+            }
+
+
+
+
+
+        </style>
+        </head>
+        <body>
+            <div id="firstdiv">
+            <h3>World Cup Triumph</h3>
+            <p>India has won the world cup two times in 1983 and in 2011. Hope they can win it again</p>
+            <h3> PV Sindhu </h3>
+            <p> PV Sindhu has made the whole nation proud by winning two back to back medals for India</p>
+            <h3>Indian hockey team</h3>
+            <p>Indian hockey team has made history by reaching the Semifinals in the tokyo olympics 2021</p>
+            </div>
+        </body>
+        <script src="importedcode.js"></script>
+        <script src="jqueryUI/jquery-ui.js"></script>
+        <script>
+            $("#firstdiv").accordion({
+                collapsible:true,
+                event:"click",
+                icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+
+
+
+
+
+            });
+
+
+
+
+        </script>
+
+    
+</html>
