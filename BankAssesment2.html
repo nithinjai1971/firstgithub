@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>
+        This is the second page of the bank application program.
+    </title>
+    <style>
+        #Secondpagediv {
+            background-color: pink;
+            border: 4px solid;
+            padding: 15px;
+        }
+
+        body {
+            background-color: royalblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Secondpagediv">
+        <form name="Fullsecondpage">
+            <label for="accno">Enter your Account number:</label>
+            <input type="number" id="accno" disabled>
+            <br>
+            <br>
+            <label for="bal">Your balance:</label>
+            <input type="number" id="bal" disabled>
+            <br>
+            <br>
+            <label for="credit">Enter your credit amount:</label>
+            <input type="number" id="credit" value=0>
+            <br>
+            <br>
+            <input type="button" value="Complete Credit Transaction" id="creditBtn">
+            <br>
+            <br>
+            <label for="debit">Enter your Debit amount:</label>
+            <input type="number" id="debit" value=0>
+            <br>
+            <br>
+            <input type="button" value="Complete Debit Transaction" id="debitBtn">
+            <br>
+            <br>
+            <input type="button" value="Joint Account" id="joint">
+        </form>
+    </div>
+</body>
+<script src="importedcode.js"></script>
+<script src="jqueryUI/jquery-ui.js"></script>
+<script>
+
+    var x = localStorage.getItem("1001");
+    $("#bal").val(x);
+    $("#accno").val("1001");
+
+    $("#creditBtn").click(function(){
+        var currentbalance = parseInt($("#bal").val());
+        var creditamt = parseInt($("#credit").val());
+        currentbalance += creditamt;
+        localStorage.setItem("1001", currentbalance);
+        var updatedbalance = localStorage.getItem("1001");
+        $("#bal").val(updatedbalance);
+    })
+
+    $("#debitBtn").click(function () {
+        var currentbalance = parseInt($("#bal").val());
+        var debitamt = parseInt($("#debit").val());
+        currentbalance -= debitamt;
+        localStorage.setItem("1001", currentbalance);
+        var updatedbalance = localStorage.getItem("1001");
+        $("#bal").val(updatedbalance);
+    });
+
+    $("#joint").click(function () {
+
+        window.location.href = "BankAssesment3.html";
+    })
+
+</script>
+
+</html>

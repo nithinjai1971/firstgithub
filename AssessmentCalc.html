@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title> Calculator second try</title>
+        <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+        <style>
+            .fulldiv{
+                border:5px solid;
+                border-color: lightskyblue;
+                background-color: black;
+                text-align: center;
+                padding:20px;
+                height: 200px;
+                width: 200px;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:auto;
+                align-items: center;
+            }
+
+            body{
+                height:100vh;
+                background-color: #fff5ba;
+                
+            }
+
+        </style>
+        </head>
+        <body>
+            <div class="fulldiv">
+            <form name="fullform">
+
+                <input type="text" id="calculatingspace" name="answer" disabled><br><br>
+
+                <input type="button" value="1" onclick="fullform.answer.value+='1'">
+                <input type="button" value="2" onclick="fullform.answer.value+='2'">
+                <input type="button" value="3" onclick="fullform.answer.value+='3'">
+                <input type="button" value="+" id="add">
+                <br>
+                <input type="button" value="4" onclick="fullform.answer.value+='4'">
+                <input type="button" value="5" onclick="fullform.answer.value+='5'">
+                <input type="button" value="6" onclick="fullform.answer.value+='6'">
+                <input type="button" value="-" id="sub">
+                <br>
+                <input type="button" value="7" onclick="fullform.answer.value+='7'">
+                <input type="button" value="8" onclick="fullform.answer.value+='8'">
+                <input type="button" value="9" onclick="fullform.answer.value+='9'">
+                <input type="button" value="*" id="mul">
+                <br>
+                <input type="button" value="C" onclick="fullform.answer.value=''">
+                <input type="button" value="0" onclick="fullform.answer.value+='0'">
+                <input type="button" value="." onclick="fullform.answer.value+='.'">
+                <input type="button" value="/" id="div">
+                <br>
+                <input type="button" value="Del" onclick="fullform.answer.value=''">
+                <input type="button" value="%" id="mod">
+                <input type="button" value="=" onclick="fullform.answer.value=eval(fullform.answer.value)">
+                
+                <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+
+
+            </div>
+        </body>
+        <script src="importedcode.js"></script>
+        <script src="jqueryUI/jquery-ui.js"></script>
+        <script>
+            $("#add").click(function(){
+                
+                
+               var x= fullform.answer.value;
+                
+               var lastdigit=x.charAt(x.length-1);
+               
+               if(!(lastdigit=="+"|| lastdigit=="-"||lastdigit=="*"||lastdigit=="/"||lastdigit=="%"||lastdigit=="")){
+                   fullform.answer.value+="+"
+               }
+
+            })
+            $("#sub").click(function(){
+                
+                
+                var y= fullform.answer.value;
+                var lastdigit=y.charAt(y.length-1);
+                
+                if(!(lastdigit=="+"|| lastdigit=="-"||lastdigit=="*"||lastdigit=="/"||lastdigit=="%"||lastdigit=="")){
+                    fullform.answer.value+="-"
+                }
+ 
+             })
+             $("#mul").click(function(){
+                
+                
+                var z= fullform.answer.value;
+                var lastdigit=z.charAt(z.length-1);
+                
+                if(!(lastdigit=="+"|| lastdigit=="-"||lastdigit=="*"||lastdigit=="/"||lastdigit=="%"||lastdigit=="")){
+                    fullform.answer.value+="*"
+                }
+ 
+             })
+             $("#div").click(function(){
+                
+                
+                var a= fullform.answer.value;
+                var lastdigit=a.charAt(a.length-1);
+                
+                if(!(lastdigit=="+"|| lastdigit=="-"||lastdigit=="*"||lastdigit=="/"||lastdigit=="%"||lastdigit=="")){
+                    fullform.answer.value+="/"
+                }
+ 
+             })
+             $("#mod").click(function(){
+                
+                
+                var b= fullform.answer.value;
+                var lastdigit=b.charAt(b.length-1);
+                
+                if(!(lastdigit=="+"|| lastdigit=="-"||lastdigit=="*"||lastdigit=="/"||lastdigit=="%"||lastdigit=="")){
+                    fullform.answer.value+="%"
+                }
+ 
+             })
+        </script>
+</html>

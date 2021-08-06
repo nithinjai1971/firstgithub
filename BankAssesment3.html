@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>3rd page of the bank account</title>
+        <style>
+            #thirdpagediv{
+                background-color: blueviolet;
+                padding:15px;
+            }
+            body{
+                background-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="thirdpagediv">
+
+            <h3> Welcome to SBI.</h3>
+            <br>
+            <br>
+            <h4> Please enter your bank details</h4>
+            <br>
+            <br>
+            <label for="jointuser2">Your username</label>
+            <input type="text" id="jointusername">
+            <br>
+            <br>
+            <label for="jointpass2">Your password</label>
+            <input type="password" id="jointpassword">
+            <br>
+            <br>
+            <input type="button" id="loginbutton2" value="Login">
+
+        </div>
+    </body>
+    <script src="importedcode.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+        
+        
+        
+        $("#loginbutton2").click(function(){
+            var user=$("#jointusername").val();
+            var pass=$("#jointpassword").val();
+            if(user=="nishanth" && pass=="nishanth123"){
+                window.location.href="BankAssesment4.html";
+            }
+        else{
+                alert("Your login details are incorrect"); 
+            }
+        })
+    </script>
+</html>

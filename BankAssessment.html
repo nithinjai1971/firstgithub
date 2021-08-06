@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            Bank assesment parent page
+        </title>
+        <style>
+            #firstpage{
+                background-color:skyblue;
+                border: 3px solid;
+                border-color: tomato;
+                padding:15px;
+                text-align: center;
+                margin-left: auto;
+                width:auto;
+
+            }
+            body{
+                background-color: turquoise;
+            }
+    
+        </style>
+    </head>
+
+    <body>
+        <div id="logo">
+            <img src="SBI.png" width="150px" height="50px">
+
+        </div>
+        <br>
+        <br>
+        <div id="firstpage">
+        <h3 id="Loginheader">Welcome to SBI(State bank of India)</h3>
+        <br>
+        <br>
+        <label for="usernamee">Enter your Username</label>
+        <input type="text" id="usernamee" placeholder="username">
+        <br>
+        <br>
+        <label for="passwordd">Enter your Password</label>
+        <input type="password" id="passwordd" placeholder="password">
+        <br>
+        <br>
+        <br>
+        
+        <input type="button" id="submit" value="Submit">
+
+        </div>
+    </body>
+    <script src="importedcode.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        $("#submit").click(function(){
+
+            var user=$("#usernamee").val();
+            var pass=$("#passwordd").val();
+
+            localStorage.setItem("user",user);
+            localStorage.setItem("password",pass);
+            var amount= localStorage.getItem("1001");
+                if(!amount){
+                    localStorage.setItem("1001",2000)
+                }
+        
+            if(user=="nithin"&& pass=="nithin123"){
+                window.location.href="BankAssesment2.html";
+            }
+
+            else{
+                    alert("Your Details are incorrect");
+                }
+        })
+          
+    </script>
+        
+    
+</html>
